@@ -1,0 +1,158 @@
+.bg-nav{
+    background-color:#E7F1FF;
+}
+
+.nav-text {
+    vertical-align: middle;
+    color: cornflowerblue;
+}
+
+
+a:hover {
+    color: rgb(5, 5, 101);
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+
+.body-header{
+    font-size:xx-large;
+    color:cornflowerblue;
+    vertical-align: middle;
+}
+
+.body-subheader{
+    font-size:x-large;
+    color:cornflowerblue;
+    vertical-align: middle;
+}
+
+.bg-blue {
+    background-color: #E7F1FF;
+    border-radius: 8px;
+}
+
+.bg-red {
+    background-color: #ffebe8;
+    border-radius: 8px;
+}
+
+
+.bg-blue:hover {
+    background-color: rgb(182, 208, 255);
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.bg-red:hover {
+    background-color: rgb(254, 181, 176);
+    color: #fff;
+    cursor: pointer;
+}
+
+.dropdown-nav {
+    border-radius: 10px;
+    text-align: center;
+    background-color: cornflowerblue;
+    color:white;
+}
+
+
+.td-text{
+    font-size: medium;
+    line-height: 30px;
+}
+
+th{
+    line-height: 50px;
+    min-height: 25px;
+    height: 25px;
+ }
+
+
+thead{
+    /*font-family: 'Poppins', sans-serif;*/
+    font-weight: bold;
+    font-size: 20px;
+    color: cornflowerblue;
+    background-color: #E7F1FF;
+}
+
+.table thead th, .table td{
+    border: none;
+}
+
+/*.table tbody td:first-child{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.table tbody td:last-child{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}*/
+
+#spacing-row{
+    height: 10px;
+}
+
+.accordion-button-blue{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    background-color: #E7F1FF;
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+}
+
+.accordion-button-red{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    background-color: #ffebe8;
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+}
+
+.row-content {
+        padding: 50px 0;
+        border-bottom: 1px ridge;
+        min-height: 200px;
+}
+
+.form-group{
+    margin-top: 10;
+    margin-bottom: 1rem;
+}
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown1::before {
+    position: absolute;
+    /*content: " \2193";*/
+    top: 0px;
+    right: -8px;
+    height: 20px;
+    width: 20px;
+}

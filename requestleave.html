@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css" /> -->
+      <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+      <link rel="stylesheet" href="css/styles.css" />
+      <link rel="stylesheet" href="js/script.js" />
+
+      <title>Request Leaves</title>
+
+    </head>
+
+  <body>
+  <div class="container-fluid">
+    <div class="row flex-nowrap">
+      <div class="col-auto col-md-3 col-xl-2 px-sm-2 pc-0 bg-nav min-vh-100">
+        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2">
+          
+          <a href="/" class="d-flex align-items-center pb-3 mb-md me-md-auto ">
+            <h2 class="pt-3"><span class="d-none d-sm-inline nav-text"> TimeKeeper</span></h2>
+            <h2 class="pt-3"><span class="d-block d-sm-none nav-text"> TK</span></h2>
+          </a>
+
+          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link align-middle px-0">
+                <i class="fs-4 bi-clock nav-text"></i><span class="ms-1 d-none d-sm-inline nav-text"> Submit Timesheet</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="navlink align-middle px-0">
+                <i class="fs-4 bi-person-dash nav-text"></i><span class="ms-1 d-none d-sm-inline nav-text"> Request Leave</span>
+              </a>
+            </li>
+
+            <hr/>
+
+            <li class="nav-item">
+              <a href="reviewtimesheets.html" class="navlink align-middle px-0">
+                <i class="fs-4 bi-check-circle nav-text"></i><span class="ms-1 d-none d-sm-inline nav-text"> Review Timesheets</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="reviewleaves.html" class="navlink align-middle px-0">
+                <i class="fs-4 bi-person-check nav-text"></i><span class="ms-1 d-none d-sm-inline nav-text"> Review Leaves</span>
+              </a>
+            </li>
+
+            <hr/>
+
+            <li class="nav-item">
+              <a href="locktimeentry.html" class="navlink align-middle px-0">
+                <i class="fs-4 bi-file-lock nav-text"></i><span class="ms-1 d-none d-sm-inline nav-text"> Lock Time Entry</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="downloaddata.html" class="navlink align-middle px-0">
+                <i class="fs-4 bi-download nav-text"></i><span class="ms-1 d-none d-sm-inline nav-text"> Download Data</span>
+              </a>
+            </li>
+            
+          </ul>
+
+          <hr />
+
+          <div class="dropdown pb-4">
+            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle nav-text" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="\assets\img\mrbean.png" alt="bean" width="30" height="30" class="rounded-circle">
+              <span class="d-none d-sm-inline mx-1 nav-text">Mr. Bean</span>
+            </a>
+
+            <ul class="dropdown-menu dropdown-select shadow" aria-labelledby="dropdownUser">
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col py-3 px-4">
+        <div class="row">
+          <i class="bi-person-dash body-header col-auto"></i>
+          <span class="body-header col-auto">Request Leave</span>
+        </div>
+        
+        <hr/>
+      
+        <div class="row">
+          <div class="col-md-8">
+              <form class="row g-3">
+                <div class="form-group col-xs-12 col-md-7 col-xl-5">
+                  <label for="leaveType" class="form-label">Leave Type</label>
+                  <select id="leaveType" class="form-select">
+                    <option></option>
+                    <option>Personal Leave</option>
+                    <option>Sick Leave</option>
+                    <option>Vacation Leave</option>
+                  </select>
+                </div>
+                <div class="form-group col-xs-12 col-md-5 col-xl-4">
+                  <label for="hoursRequested" class="form-label">Hours Requested</label>
+                  <input type="number" class="form-control" id="hoursRequested">
+                </div>
+
+                <div class="form-group col-xs-12 col-xl-3">
+                  <label for="subRequiredRadios" class="form-label">Substitute Required?</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="subRequiredYes" name="subRequiredRadios" value="yes" />
+                        <label for="subRequiredYes" class="form-check-label">Yes</label>
+                      </div>
+                  
+                      <div class="form-check form-check-inline">
+                          <input type="radio" class="form-check-input" id="subRequiredNo" name="subRequiredRadios" value="no" />
+                          <label for="subRequiredNo" class="form-check-label">No</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group col-lg-6">
+                  <label for="leaveDateFrom" class="form-label">Date From</label>
+                  <input type="date" id="leaveDateFrom" class="form-control">
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="leaveDateTo" class="form-label">Date To</label>
+                    <input type="date" id="leaveDateTo" class="form-control">
+                </div>
+
+                <div class="form-group row">
+                  <label for="comments" class="form-label">Comments</label>
+                  <div class="col">
+                    <textarea class="form-control" id="comments" name="comments" rows="5"></textarea>
+                  </div>
+                </div>
+                
+                <div class="form-group row">
+                  <div class="col-md-10">
+                     <button type="submit" class="btn bg-blue">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+                  
+        <div class="col">
+          <table class="table caption-top table-sm">
+            <caption>Leave Balance (hrs)</caption>
+            <thead class="td-text">
+              <tr>
+                <th scope="col">Leave Type</th>
+                <th scope="col">Earned</th>
+                <th scope="col">Used</th>
+                <th scope="col">Balance</th>
+              </tr>
+            </thead>
+            <tbody class="td-text">
+              <tr>
+                <td>PTO</th>
+                <td>20</td>
+                <td>8</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>Sick</th>
+                <td>6</td>
+                <td>0</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>Vacation</th>
+                <td>40</td>
+                <td>8</td>
+                <td>32</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr/>
+          <table class="table caption-top table-sm">
+            <caption>Leave Summary</caption>
+            <thead class="td-text">
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Type</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody  class="td-text">
+              <tr>
+                <td >06/12/22</td>
+                <td>Sick</td>
+                <td class="text-success">Approved</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>12/25/22</th>
+                <td>Vacation</td>
+                <td class="text-warning">Pending</td>
+                <td><a class="bi-x-circle text-danger" href="#">&nbsp;<a class="bi-pencil-square text-primary" href="#"></a> </i></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+      </div>
+    </div>
+  </div>
+  </body>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</html>

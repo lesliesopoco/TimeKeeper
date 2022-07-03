@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!--  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css" /> -->
+      <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+      <link rel="stylesheet" href="css/styles.css" />
+      <link rel="stylesheet" href="js/script.js" />
+      
+      <title>Review Timesheets</title>
+    
+      </head>
+      <body>
+        <div class="container-fluid">
+          <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 pc-0 bg-nav min-vh-100">
+              <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2">
+                  
+                <a href="/" class="d-flex align-items-center pb-3 mb-md me-md-auto ">
+                  <h2 class="pt-3"><span class="d-none d-sm-inline nav-text"> TimeKeeper</span></h2>
+                  <h2 class="pt-3"><span class="d-block d-sm-none nav-text"> TK</span></h2>
+                </a>
+  
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                  <li class="nav-item">
+                    <a href="index.html" class="nav-link align-middle px-0">
+                      <i class="fs-4 bi-clock nav-text"></i><span class="ms-1 d-none d-sm-inline nav-text"> Submit Timesheet</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="requestleave.html" class="navlink align-middle px-0">
+                      <i class="fs-4 bi-person-dash nav-text"></i><span class="ms-1 d-none d-sm-inline nav-text"> Request Leave</span>
+                    </a>
+                  </li>
+ 
+                  <hr/>
+ 
+                  <li class="nav-item">
+                    <a href="#" class="navlink align-middle px-0">
+                      <i class="fs-4 bi-check-circle nav-text"></i><span class="ms-1 d-none d-sm-inline nav-text"> Review Timesheets</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="reviewleaves.html" class="navlink align-middle px-0">
+                      <i class="fs-4 bi-person-check nav-text"></i><span class="ms-1 d-none d-sm-inline nav-text"> Review Leaves</span>
+                    </a>
+                  </li>
+ 
+                  <hr/>
+
+                  <li class="nav-item">
+                    <a href="locktimeentry.html" class="navlink align-middle px-0">
+                      <i class="fs-4 bi-file-lock nav-text"></i><span class="ms-1 d-none d-sm-inline nav-text"> Lock Time Entry</span>
+                    </a>
+                  </li>
+  
+                  <li class="nav-item">
+                    <a href="downloaddata.html" class="navlink align-middle px-0">
+                      <i class="fs-4 bi-download nav-text"></i><span class="ms-1 d-none d-sm-inline nav-text"> Download Data</span>
+                    </a>
+                  </li>
+                     
+                </ul>
+  
+                <hr />
+  
+                <div class="dropdown pb-4">
+                  <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle nav-text" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="\assets\img\mrbean.png" alt="bean" width="30" height="30" class="rounded-circle">
+                    <span class="d-none d-sm-inline mx-1 nav-text">Mr. Bean</span>
+                  </a>
+  
+                  <ul class="dropdown-menu dropdown-select shadow" aria-labelledby="dropdownUser">
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col py-3 px-4">
+              <div class="row">
+                <i class="bi-check-circle body-header col-auto"></i>
+                <span class="body-header col-auto">Review Timesheets</span>
+              </div>
+                
+              <hr/>
+
+              <h3 class="body-subheader"> IT Department</h3>
+                
+              <br/>
+                
+              <div class="accordion" id="accordionApproval">
+                 <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button-blue collapsed bg-blue" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Victoria Kozlova
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionApproval">
+                      <div class="accordion-body">
+                        
+                        <table class="table-bordered table-sm col-12 text-center">
+                          <thead>
+                            <tr class="fs-6">
+                              <th scope="col">Job</th>
+                              <th scope="col">Sun</th>
+                              <th scope="col">Mon</th>
+                              <th scope="col">Tues</th>
+                              <th scope="col">Wed</th>
+                              <th scope="col">Thu</th>
+                              <th scope="col">Fri</th>
+                              <th scope="col">Sat</th>
+                            </tr>
+                          </thead>
+                          <tbody class="td-text">
+                            <tr>
+                              <td>Data Analyst</td>
+                              <td>8</td>
+                              <td>8</td>
+                              <td>8</td>
+                              <td>8</td>
+                              <td>8</td>
+                              <td>8</td>
+                              <td>8</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="form-group row mt-3">
+                          <div class="col">
+                            <button type="button" class="btn bg-blue">Approve</button>
+                            <button type="button" class="btn bg-blue">Reject</button>
+                            <button type="button" class="btn bg-blue">Override</button>
+                            <textarea class="form-control mt-3 text-secondary" id="notes" name="comments" rows="2">Notes</textarea>
+                          </div>
+                        </div>
+                                  
+                      </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button-red collapsed bg-red" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Chun Lee
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionApproval">
+                        <div class="accordion-body">
+                          <table class="table-bordered table-sm col-12 text-center">
+                            <thead>
+                              <tr class="fs-6">
+                                <th scope="col">Job</th>
+                                <th scope="col">Sun</th>
+                                <th scope="col">Mon</th>
+                                <th scope="col">Tues</th>
+                                <th scope="col">Wed</th>
+                                <th scope="col">Thu</th>
+                                <th scope="col">Fri</th>
+                                <th scope="col">Sat</th>
+                              </tr>
+                            </thead>
+                            <tbody class="td-text">
+                              <tr>
+                                <td>Custodian</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>4</td>
+                              </tr>
+                              <tr>
+                                <td>Messenger</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>4</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <div class="form-group row mt-3">
+                            <div class="col">
+                              <button type="button" class="btn bg-blue">Approve</button>
+                              <button type="button" class="btn bg-blue">Reject</button>
+                              <button type="button" class="btn bg-blue">Override</button>
+                              <textarea class="form-control mt-3 text-secondary" id="notes" name="comments" rows="2">Notes</textarea>
+                            </div>
+                          </div>
+
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button-red collapsed bg-red" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Maria Enriquez
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionApproval">
+                        <div class="accordion-body">
+                          <table class="table-bordered table-sm col-12 text-center">
+                            <thead>
+                              <tr class="fs-6">
+                                <th scope="col">Job</th>
+                                <th scope="col">Sun</th>
+                                <th scope="col">Mon</th>
+                                <th scope="col">Tues</th>
+                                <th scope="col">Wed</th>
+                                <th scope="col">Thu</th>
+                                <th scope="col">Fri</th>
+                                <th scope="col">Sat</th>
+                              </tr>
+                            </thead>
+                            <tbody class="td-text">
+                              <tr>
+                                <td>Manager</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <div class="form-group row mt-3">
+                            <div class="col">
+                              <button type="button" class="btn bg-blue">Approve</button>
+                              <button type="button" class="btn bg-blue">Reject</button>
+                              <button type="button" class="btn bg-blue">Override</button>
+                              <textarea class="form-control mt-3 text-secondary" id="notes" name="comments" rows="2">Notes</textarea>
+                            </div>
+                          </div>
+  
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button-blue collapsed bg-blue" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                          George Black
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionApproval">
+                        <div class="accordion-body">
+                          <table class="table-bordered table-sm col-12 text-center">
+                            <thead>
+                              <tr class="fs-6">
+                                <th scope="col">Job</th>
+                                <th scope="col">Sun</th>
+                                <th scope="col">Mon</th>
+                                <th scope="col">Tues</th>
+                                <th scope="col">Wed</th>
+                                <th scope="col">Thu</th>
+                                <th scope="col">Fri</th>
+                                <th scope="col">Sat</th>
+                              </tr>
+                            </thead>
+                            <tbody class="td-text">
+                              <tr>
+                                <td>Courier</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <div class="form-group row mt-3">
+                            <div class="col">
+                              <button type="button" class="btn bg-blue">Approve</button>
+                              <button type="button" class="btn bg-blue">Reject</button>
+                              <button type="button" class="btn bg-blue">Override</button>
+                              <textarea class="form-control mt-3 text-secondary" id="notes" name="comments" rows="2">Notes</textarea>
+                            </div>
+                          </div>
+
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+</html>
