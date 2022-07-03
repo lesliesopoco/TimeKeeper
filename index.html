@@ -5,7 +5,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-<!--      <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css" /> -->
       <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
       <link rel="stylesheet" href="node_modules/tui-calendar/dist/tui-calendar.min.css" />
       <link rel="stylesheet" href="css/styles.css" />
@@ -90,7 +89,7 @@
 
               <div class="row">
                 <div class="col">
-                    <form class="row g-3">
+                    <form class="row g-3 text-center">
                       <div class="form-group col-xs-12 col-md-3">
                         <label for="job" class="form-label">Job</label>
                         <select id="job" class="form-select">
@@ -99,53 +98,47 @@
                           <option>Programmer</option>
                         </select>
                       </div>
-                    
-                      <div>
-                        
+                      <div class="form-group form-label col">
+                        <label for="sun" class="form-label">Sun</label>
+                        <input type="number" class="form-control">
                       </div>
-                    
+                      <div class="form-group form-label col">
+                        <label for="mon" class="form-label">Mon</label>
+                        <input type="number" class="form-control">
+                      </div>
+                      <div class="form-group form-label col">
+                        <label for="tue" class="form-label">Tue</label>
+                        <input type="number" class="form-control">
+                      </div>
+                      <div class="form-group form-label col">
+                        <label for="wed" class="form-label">Wed</label>
+                        <input type="number" class="form-control">
+                      </div>
+                      <div class="form-group form-label col">
+                        <label for="thu" class="form-label">Thu</label>
+                        <input type="number" class="form-control">
+                      </div>
+                      <div class="form-group form-label col">
+                        <label for="fri" class="form-label">Fri</label>
+                        <input type="number" class="form-control">
+                      </div>
+                      <div class="form-group form-label col">
+                        <label for="sat" class="form-label">Sat</label>
+                        <input type="number" class="form-control">
+                      </div>
+
                     </form>
+                      <div class="form-group row">
+                        <div class="col">
+                          <button type="add" class="btn btn-blue bg-blue">Add</button>
+                          <button type="submit" class="btn btn-blue bg-blue">Submit</button>
+                          <button type="clear" class="btn btn-blue bg-blue">Clear</button>
+                        </div>
+                      </div>
       
 
-
+      
 <!--              <div id="calendar" style="height: 800px"></div> -->
-<table class="table-bordered table-sm col-12 text-center">
-  <thead>
-    <tr class="fs-6">
-      <th scope="col">Job</th>
-      <th scope="col">Sun</th>
-      <th scope="col">Mon</th>
-      <th scope="col">Tues</th>
-      <th scope="col">Wed</th>
-      <th scope="col">Thu</th>
-      <th scope="col">Fri</th>
-      <th scope="col">Sat</th>
-    </tr>
-  </thead>
-  <tbody class="td-text">
-    <tr>
-      <td>Custodian</td>
-      <td>8</td>
-      <td>8</td>
-      <td>8</td>
-      <td>8</td>
-      <td>8</td>
-      <td>8</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>Messenger</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>4</td>
-    </tr>
-  </tbody>
-</table>
-
 
             </div>
           </div>
